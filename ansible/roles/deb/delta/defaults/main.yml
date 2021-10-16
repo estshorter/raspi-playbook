@@ -1,0 +1,2 @@
+delta_version: 0.8.3
+delta_url: "https://github.com/dandavison/delta/releases/download/{{ delta_version }}/git-delta_{{ delta_version }}_arm64.deb"

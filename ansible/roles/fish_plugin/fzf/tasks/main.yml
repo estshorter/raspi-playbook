@@ -1,0 +1,7 @@
+- import_role: { name: check/absent }
+  vars:
+    target: PatrickF1_fzf
+    command: "/usr/bin/fish -c 'fisher list | grep -E PatrickF1/fzf.fish'"
+
+- import_tasks: install.yml
+  when: PatrickF1_fzf_is_absent

@@ -1,0 +1,4 @@
+- name: Install
+  shell:
+    cmd: "fisher install jethrokuan/z"
+    executable: /usr/bin/fish

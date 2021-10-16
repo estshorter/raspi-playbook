@@ -1,0 +1,11 @@
+- name: Download
+  unarchive:
+    src: "{{ ripgrep_url }}"
+    dest: /tmp
+    remote_src: yes
+
+- name: Install
+  become: yes
+  shell: mv rg /usr/local/bin
+  args:
+    chdir: /tmp

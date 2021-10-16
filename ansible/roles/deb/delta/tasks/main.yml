@@ -1,0 +1,10 @@
+- import_role: { name: check/absent }
+  vars:
+    target: delta
+    command: "dpkg-query -W git-delta | grep -E '{{ delta_version }}'"
+
+- name: Install from deb
+  become: yes
+  apt:
+    deb: "{{ delta_url }}"
+  when: delta_is_absent

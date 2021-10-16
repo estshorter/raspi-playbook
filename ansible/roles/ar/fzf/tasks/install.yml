@@ -1,0 +1,11 @@
+- name: Download
+  unarchive:
+    src: "{{ fzf_url }}"
+    dest: /tmp
+    remote_src: yes
+
+- name: Install
+  become: yes
+  shell: mv fzf /usr/local/bin
+  args:
+    chdir: /tmp

@@ -1,0 +1,3 @@
+dependencies:
+  - role: fish_plugin/fisher
+    when: fisher is undefined

@@ -1,0 +1,7 @@
+{
+    "channel_id": 28329,
+    "write_key": "26d6f6a8b9ffd4ff",
+    "monitoring_cycle_seconds": 3,
+    "reporting_cycle_seconds": 30,
+    "port": 30864
+}

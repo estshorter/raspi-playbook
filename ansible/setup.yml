@@ -1,0 +1,14 @@
+- hosts: all
+  remote_user: ubuntu
+  roles:
+    - apt/upgrade
+    - apt/install_essentials
+    - apt/git
+    - ar/fzf
+    - ar/ripgrep
+    - deb/bat
+    - deb/delta
+    - conf
+    - fish_plugin/fisher
+    - fish_plugin/z
+    - fish_plugin/theme-bobthefish

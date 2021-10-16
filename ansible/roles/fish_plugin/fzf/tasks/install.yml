@@ -1,0 +1,4 @@
+- name: Install
+  shell:
+    cmd: "fisher install PatrickF1/fzf.fish"
+    executable: /usr/bin/fish

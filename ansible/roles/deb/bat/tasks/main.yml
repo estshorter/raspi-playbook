@@ -1,0 +1,10 @@
+- import_role: { name: check/absent }
+  vars:
+    target: bat
+    command: "dpkg-query -W bat | grep -E '{{ bat_version }}'"
+
+- name: Install from deb
+  become: yes
+  apt:
+    deb: "{{ bat_url }}"
+  when: bat_is_absent

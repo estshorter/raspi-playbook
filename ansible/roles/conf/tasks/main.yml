@@ -1,0 +1,33 @@
+- name: Download .gitconfig
+  get_url:
+    url: https://raw.githubusercontent.com/estshorter/config/master/.gitconfig.raspi
+    dest: /home/{{ ansible_user_id }}/.gitconfig
+- name: use fish instead of bash
+  lineinfile:
+    path: /home/{{ ansible_user_id }}/.bashrc
+    state: present
+    regexp: '^exec fish'
+    line: 'exec fish'
+- name : check that fish_greeting is empty
+  shell:
+    cmd: if test "$fish_greeting" = ""; true; else;	false; end
+    executable: /usr/bin/fish
+  register: need_set_fish_greeting
+  failed_when: no
+  changed_when: no
+- name: suppress fish greeting message
+  shell:
+    cmd: set fish_greeting
+    executable: /usr/bin/fish
+  when: need_set_fish_greeting.rc != 0
+- name: Download config.fish
+  get_url:
+    url: https://raw.githubusercontent.com/estshorter/config/master/config.fish.raspi
+    dest: /home/{{ ansible_user_id }}/.config/fish/config.fish
+- name: disable nginx logging
+  lineinfile:
+    path: /etc/nginx/nginx.conf
+    state: present
+    regexp: '\taccess_log /var/log/nginx/access.log;'
+    line: '	access_log off;'
+  become: yes

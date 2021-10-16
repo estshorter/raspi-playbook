@@ -1,0 +1,4 @@
+- name: Install
+  shell:
+    cmd: "fisher install oh-my-fish/theme-bobthefish"
+    executable: /usr/bin/fish

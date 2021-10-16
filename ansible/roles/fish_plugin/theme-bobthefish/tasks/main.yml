@@ -1,0 +1,7 @@
+- import_role: { name: check/absent }
+  vars:
+    target: theme_bobthefish
+    command: "/usr/bin/fish -c 'fisher list | grep -E oh-my-fish/theme-bobthefish'"
+
+- import_tasks: install.yml
+  when: theme_bobthefish_is_absent

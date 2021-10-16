@@ -1,0 +1,20 @@
+  - name: Install packages using apt
+    become: yes
+    apt:
+      name: 
+        - language-pack-ja
+        - avahi-daemon
+        - build-essential
+        - cmake
+        - ninja-build
+        - fish 
+        - libudev-dev # for co2meter
+        - nginx # for co2meter
+        - pkg-config
+        - libbluetooth-dev # mho-co303
+        - libglib2.0-dev
+        - exa
+        - fd-find
+        - wget
+        - curl
+        - htop
