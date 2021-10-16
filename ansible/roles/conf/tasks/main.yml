@@ -3,11 +3,13 @@
     url: https://raw.githubusercontent.com/estshorter/config/master/.gitconfig.raspi
     dest: /home/{{ ansible_user_id }}/.gitconfig
 - name: use fish instead of bash
-  lineinfile:
+  blockinfile:
     path: /home/{{ ansible_user_id }}/.bashrc
-    state: present
-    regexp: '^exec fish'
-    line: 'exec fish'
+    block: |
+      case $- in
+      *i*) exec fish;;
+        *) return;;
+      esac
 - name : check that fish_greeting is empty
   shell:
     cmd: if test "$fish_greeting" = ""; true; else;	false; end
