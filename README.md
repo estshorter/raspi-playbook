@@ -23,11 +23,6 @@ git config --global credential.helper cache
 ## note
 fish config
 
-- [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
-- [PatrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish)
-- [jethrokuan/z](https://github.com/jethrokuan/z)
-- [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
-
 ``` fish
 fish_config 
 set fish_greeting
@@ -36,4 +31,6 @@ set fish_greeting
 other tools
 - [pueue](https://github.com/Nukesor/pueue)
 
-https://qiita.com/eduidl/items/dc2f29cac7232a9a97d8
+## Refs
+- [fishでbashスクリプトを読み込む](https://qiita.com/eduidl/items/dc2f29cac7232a9a97d8)
+- [ログインシェルは bash のまま fish を利用する](https://qiita.com/tak-onda/items/a90b63d9618d6b15c18c)
