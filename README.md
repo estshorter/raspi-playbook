@@ -27,7 +27,7 @@ fish config
 - [PatrickF1/fzf.fish](https://github.com/PatrickF1/fzf.fish)
 - [jethrokuan/z](https://github.com/jethrokuan/z)
 - [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
-- 
+
 ``` fish
 fish_config 
 set fish_greeting
