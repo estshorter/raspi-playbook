@@ -12,7 +12,7 @@
       esac
 - name : check that fish_greeting is empty
   shell:
-    cmd: if test "$fish_greeting" = ""; true; else;	false; end
+    cmd: if test "$fish_greeting" = ""; true; else; false; end
     executable: /usr/bin/fish
   register: need_set_fish_greeting
   failed_when: no
