@@ -20,7 +20,6 @@ git config --global pull.rebase false
 git config --global credential.helper cache
 ```
 
-## note
 fish config
 
 ``` fish
