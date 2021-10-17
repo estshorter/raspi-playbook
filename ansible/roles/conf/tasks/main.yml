@@ -24,7 +24,7 @@
   when: need_set_fish_greeting.rc != 0
 - name: Download config.fish
   get_url:
-    url: https://raw.githubusercontent.com/estshorter/config/master/config.fish.raspi
+    url: https://raw.githubusercontent.com/estshorter/config/master/config.fish
     dest: /home/{{ ansible_user_id }}/.config/fish/config.fish
 - name: disable nginx logging
   lineinfile:
