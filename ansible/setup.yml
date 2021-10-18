@@ -3,6 +3,7 @@
   roles:
     - apt/upgrade
     - apt/install_essentials
+    - apt/fish
     - apt/git
     - ar/fzf
     - ar/ripgrep
@@ -11,4 +12,5 @@
     - conf
     - fish_plugin/fisher
     - fish_plugin/z
+    - fish_plugin/fzf
     - fish_plugin/theme-bobthefish
