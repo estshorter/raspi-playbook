@@ -1,2 +1,2 @@
-ripgrep_version: 13.0.0-2
+ripgrep_version: 13.0.0-4
 ripgrep_url: "https://github.com/microsoft/ripgrep-prebuilt/releases/download/v{{ ripgrep_version }}/ripgrep-v{{ ripgrep_version }}-aarch64-unknown-linux-gnu.tar.gz"
